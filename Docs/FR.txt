@@ -1,0 +1,172 @@
+Software Requirement Specification
+-Contain Functional And Non functional Requirments
+	Functional
+	- System Intetaction with enviroment
+	- Repond to inputs
+	- genarate Inputs
+	- How to behave under cerain situations
+	
+	Non Functional
+	-Quilty Attributes
+	
+Source 
+======
+https://www.youtube.com/watch?v=nKW-aWIWpbI
+
+
+functional requirement
+======================
+Organization Management
+=======================
+
+Entire org need to be cateogrize in to folowing categories
+	-Group Of Company
+	-Company
+	-Locations
+	-Departments
+	-Sub Departments
+Every transaction apply to this grouping and Genaral master data for handling HR functionalities
+
+All Dates must goes to year-Month basics. 
+
+
+
+
+
+
+
+user listing
+------------
+user can be view edit delete in the system and must have a link to the Create new user.
+also this can be a grid view or list view and can sorted if the grid view
+also need to search the user by given type 
+
+Search critiria As folows
+========================
+<to be ammended>
+
+in the search lookup values can be added and search using them
+
+in the user createtion all data must be validated as well. and users need to map one ore more role 
+in this.
+
+all user must be maped to a employee profile on this. so the first phase user profile must be created and after 
+the certain information has been filled out only then the user must be activated. other wise display user profile
+completeance progress bar and precentage. cumpulsory data fields must be marks and need to be validated as well
+
+if user profile completance not 100% user cannot use the system functionalities
+
+there must be a place to map the system users to roles. in this eigher multiple or one user can be match to either one or more 
+user role
+
+system must have authorisation process and this can be map to a given role and to a given user.
+individual user privilages always the top level and it will overight any role privilages.for that
+system must maintain  userright entity list in memory for just in time usage. this privilage set will be the key 
+to CURD operations on all the functions of the system.
+
+Menu item loading
+-----------------
+system must have a set of inbuild function set and it need to comboned with the privilages.
+so the Privilage Set = PS will be used for loading/ disable the menus in the system.
+system must retrive the PS of a user who logs in to the system and load menues according to the PS
+
+Authorisation
+=============
+as above system must have user privilages and role privilages. in combine of those system must load PS in memory 
+that PS entry looks like this
+
+<ID><Privilage Name> <ModuleType><DocumentID><Module ID><ModuleName><Form Text><Menu Text><Alt Menu Text>
+<Prefix><Sufix><CodeLen><AutoGen><AutoClear><Access><Pause><Create><Update><View><Delete>
+
+this can be used as a template and every time a user create this will be copied to the PS and addad the user wise
+and systen will fill PS using this. 
+
+Document Management 
+===================
+
+every employee registered to the system must have a bunch of documents. thsese documents can be ammended to the system in this FR
+this 
+	-list of documents can be viewed 
+	-Required documents can be uploaded to repository and automatically update the list
+	-at any given time the documents can change and system must be facilitate to ammend those documents
+These documents categories as follows
+	-Personal Files (like CV cover latter etc..)
+	-Employement documents
+	-Educational and Professional Documents
+	-Payment and Account related documents
+all the documents can be uploaded as MS word documents or Adobe PDF formats
+
+
+Role and Organaizational Heirachi(OH)
+=================================
+
+system should facilitate to add images to user profile
+also system should facilitate a OH based on pre-supply mappings
+and users can change these mappings as well. 
+drag and drop function need to be supply in case users to arrange the OH
+
+
+
+
+Roster Management
+=================
+
+roster management must be categorized to 3 more phases
+	-Manual Simple Day basis Roster
+	-Manual Shift Base Complex Roster
+	-Automatic Simple Day Basis Roster
+	-Automatic Shift Base Complex Rouster
+	-Fully Customer Roster
+
+
+Manual Simple Day basis Roster
+------------------------------
+roster must be in Year and Month. and user can select one or more employee for the roster
+user can be create what's call Shedule . a shedule is create for a month of time. or weeks 
+so basically a shedule need to create based on weeks. 
+4 weeks = 1 month =  31 days or programatically adjusted dates
+
+this shedule must be create for following hirachi
+Group Of Company---> Company ---> Location ---> Department ---> SubDepartment
+		   
+
+
+1 week shedule from 25/01/2017
+------------------------------
+21/01/2017	wednesday
+22/01/2017	thursday
+23/01/2017	friday
+24/01/2017	saturday
+25/01/2017	sunday
+26/01/2017	monday
+27/01/2017	tuesday
+
+and if user need can be added extra days to the shedule
+Like
+28/01/2017	wednesday
+
+every day has 24 hours and need a map to every day 24 hours to add the shifts
+
+
+Shifts 
+------
+shift is a breakdown of a day. 24 hours of time there can be one or more shifts 
+this shifts can be assign to the workers or worker groups. 
+
+<see the excel File for the detailed shedule>
+
+this shedule can be use as a based template for other months of the given year
+if user use this shedule then they can be edited this shedule for other months
+
+
+
+
+
+
+
+
+
+
+
+
+
