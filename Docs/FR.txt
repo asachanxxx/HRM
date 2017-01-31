@@ -24,15 +24,31 @@ Entire org need to be cateogrize in to folowing categories
 	-Company
 	-Locations
 	-Departments
-	-Sub Departments
+	-Teams
 Every transaction apply to this grouping and Genaral master data for handling HR functionalities
 
 All Dates must goes to year-Month basics. 
 
+Location
+---------
+must have a name shortcode and address for basic and need extra relevent details as well
 
+departments
+-----------
+must have location Name Roster Color List of staff and Mangers
 
+Teams 
+-----
+this is a logical group used by system to filter out the same revelvent employees to a one team 
+and each team can apply separate Filters in rosters
 
-
+Employees 
+---------
+an employee is fallan down under departments. 
+list of employess can be viewd in one place with search and filtering
+also list of employees needed to be uploaded as Excel file Format
+in the upload section user need to given a template to fill out and upload 
+sysyetm must accept only one formated template
 
 
 user listing
@@ -121,10 +137,21 @@ roster management must be categorized to 3 more phases
 
 Manual Simple Day basis Roster
 ------------------------------
-roster must be in Year and Month. and user can select one or more employee for the roster
+
+
+roster must be in Year and Month. 
+every roster process after the it's final time is passed. if the start and end date within the current date
+then user cannot process roster. but user can valuate the roster 
+
+when valuating actual process runs with the given data and show relvent reports as well
+ 
+
 user can be create what's call Shedule . a shedule is create for a month of time. or weeks 
 so basically a shedule need to create based on weeks. 
 4 weeks = 1 month =  31 days or programatically adjusted dates
+
+all rosters created must be listed and can be shown 
+
 
 this shedule must be create for following hirachi
 Group Of Company---> Company ---> Location ---> Department ---> SubDepartment
@@ -150,8 +177,12 @@ every day has 24 hours and need a map to every day 24 hours to add the shifts
 
 Shifts 
 ------
-shift is a breakdown of a day. 24 hours of time there can be one or more shifts 
+shift is a breakdown of a day. 24 hours of timecalled "Bussiness Hours" 
+this business hours can be vari depend on the locations and departments
+there can be one or more shifts 
 this shifts can be assign to the workers or worker groups. 
+every shif has a variable break and can be marked on the system
+
 
 <see the excel File for the detailed shedule>
 
@@ -159,12 +190,17 @@ this shedule can be use as a based template for other months of the given year
 if user use this shedule then they can be edited this shedule for other months
 
 
+Filters 
+-------
+Off Day working
+	-if employees works on off days on theire given Shifts then <Shift Hours> * 2.5 OT filter apply
+	-if Employees work on more than Shit hours then <No Of hours> * 2 filter OT apply  
 
 
 
 
-
-
+13
+kasun 
 
 
 

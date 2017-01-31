@@ -1,0 +1,5 @@
+I:\Live Source Web\AdminLTE-2.3.11\AdminLTEMVC\AdminLTEMVC\Domain\bin\Debug\Domain.dll
+I:\Live Source Web\AdminLTE-2.3.11\AdminLTEMVC\AdminLTEMVC\Domain\bin\Debug\Domain.pdb
+I:\Live Source Web\AdminLTE-2.3.11\AdminLTEMVC\AdminLTEMVC\Domain\obj\Debug\Domain.csprojResolveAssemblyReference.cache
+I:\Live Source Web\AdminLTE-2.3.11\AdminLTEMVC\AdminLTEMVC\Domain\obj\Debug\Domain.dll
+I:\Live Source Web\AdminLTE-2.3.11\AdminLTEMVC\AdminLTEMVC\Domain\obj\Debug\Domain.pdb
