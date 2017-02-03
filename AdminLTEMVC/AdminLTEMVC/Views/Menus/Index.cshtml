@@ -1,0 +1,43 @@
+﻿@model IEnumerable<Domain.Navigation.Menu>
+
+@{
+    ViewBag.Title = "Menues";
+    Layout = "~/Views/Shared/_layoutAdminPanel.cshtml";
+}
+
+<h4><strong>List of Menues In the system </strong></h4>
+
+       
+        <table class="table table-striped">
+    <tr>
+        <th>
+            @*@Html.DisplayNameFor(model => model.Name)*@
+            Menu Name
+        </th>
+        <th>
+
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Id }, new { @class = "btn btn-info  btn-xs" }) |
+                @Html.ActionLink("Details", "Details", new { id = item.Id }, new { @class = "btn btn-info btn-xs" }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.Id }, new { @class = "btn btn-danger btn-xs" })
+                @Html.ActionLink("Add MenuItems", "AddMenuItems", new { Parantid = item.Id }, new { @class = "btn btn-success btn-xs" })
+            </td>
+        </tr>
+    }
+
+</table>
+
+
+
+<p>
+    @Html.ActionLink("Create New", "Create", "Menus", new { @class = "btn btn-info btn-sm" })
+</p>

@@ -1,0 +1,163 @@
+﻿@model IEnumerable<Domain.Navigation.Menu>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_layoutAdminPanel.cshtml";
+}
+<div class="row">
+    <div class="col-lg-3 col-xs-6">
+        <div class="panel panel-primary">
+            <div class="panel-heading ">
+                <h3 class="panel-title">Menue Management</h3>
+            </div>
+
+            <div class="panel-body">
+                @foreach (var item in Model)
+                {
+                    <ul>
+                        <li>
+                            <span>@item.Name</span>
+                            <a href="@Url.Action("MenuEdit", "MenuManager")">Edit </a>
+
+                            @if (item.MenuItemList.Count > 0)
+                            {
+                                <ul>
+                                    @foreach (var itemmenu in item.MenuItemList)
+                                    {
+                                        <li><span>@itemmenu.Name</span> <a href="@Url.Action("MenuItemEdit", "MenuManager")">Edit </a></li>
+                                    }
+                                </ul>
+                            }
+                        </li>
+                    </ul>
+                }
+            </div>
+            <div class="panel-footer">
+                <a class="btn btn-primary btn-sm" href="@Url.Action("MenuAllEdit", "MenuManager")">Edit menu </a>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-3 col-xs-6">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">Auto genarated Info</h3>
+            </div>
+            <div class="panel-body">
+                <p class="text-warning"><strong> Auto genarated info is useful when configuring the functionalities on individual entities and creating Autogenratated numbers </strong></p>
+                <dl>
+                    <dt class="text-info">ModuleType</dt>
+                    <dd>Modules like Master Data,Process Data etc..</dd>
+
+                    <dt class="text-info">DocumentID</dt>
+                    <dd>Id of the given Documents. All transactions handling through this ID</dd>
+
+                    <dt class="text-info">FormId</dt>
+                    <dd>Id given to individual form for referance</dd>
+
+                    <dt class="text-info">FormText</dt>
+                    <dd>Title of the Page. you can customize this and put your own name</dd>
+
+                    <dt class="text-info">AutoGenerete</dt>
+                    <dd>If this set to true document Code automatically genarated, otherwise have to manually enter</dd>
+
+                    <dt class="text-info">CodeLength</dt>
+                    <dd>Total length of the document number</dd>
+
+                    <dt class="text-info">Prefix</dt>
+                    <dd>This will be put in to the bigining of the Document Number</dd>
+
+                    <dt class="text-info">Suffix</dt>
+                    <dd>This will be put in to the end of the Document Number</dd>
+
+                    <dt class="text-info">AutoClear</dt>
+                    <dd>When this true after record inserted or Edited form will be automaticlly cleared </dd>
+                </dl>
+            </div>
+            <div class="panel-footer">
+                <a class="btn btn-primary btn-sm" href="@Url.Action("AutoEdit", "AutoInfo")">Edit AutoInfo </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- #region Company And Location Setup ************************************************************************************************* -->
+    <div class="col-lg-6 col-xs-6">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">Company And Location Setup</h3>
+            </div>
+            <div class="panel-body">
+
+                <h4 class="text-info">Company Setup</h4>
+                <div class="panel panel-primary">
+                    <div class="panel-body">
+                        <dl>
+                            <dt class="text-info">Company Code</dt>
+                            <dd>01</dd>
+
+                            <dt class="text-info">Company Name</dt>
+                            <dd>CottonLine Garments</dd>
+
+                            <dt class="text-info">Address</dt>
+                            <dd>270/A , Mullergama, Homagama</dd>
+
+                            <dt class="text-info">Telephone</dt>
+                            <dd>+94 112 5854 854</dd>
+
+                            <dt class="text-info">Fax</dt>
+                            <dd>+94 115 485 548</dd>
+
+                            <dt class="text-info">E-Mail</dt>
+                            <dd>info@cottononline.com</dd>
+
+                            <dt class="text-info">Web</dt>
+                            <dd>www.cottononline.com</dd>
+                        </dl>
+                    </div>
+                </div>
+
+
+
+
+                <h4 class="text-info">Location Setup</h4>
+                <div class="panel panel-primary">
+                    <div class="panel-body">
+                        <dl>
+                            <dt class="text-info">Location Code</dt>
+                            <dd>01</dd>
+
+                            <dt class="text-info">Location Name</dt>
+                            <dd>Production Homagama</dd>
+
+                            <dt class="text-info">Address</dt>
+                            <dd>270/A , Mullergama, Homagama</dd>
+
+                            <dt class="text-info">Telephone</dt>
+                            <dd>+94 112 5854 854</dd>
+
+                            <dt class="text-info">Fax</dt>
+                            <dd>+94 115 485 548</dd>
+
+                            <dt class="text-info">E-Mail</dt>
+                            <dd>production@cottononline.com</dd>
+
+                            <dt class="text-info">Web</dt>
+                            <dd>www.cottononline.com/Homagama</dd>
+                        </dl>
+                    </div>
+                </div>
+
+            </div>
+            <div class="panel-footer">
+                <a class="btn btn-primary btn-sm" href="@Url.Action("Edit", "Company")">Edit Company Info </a>
+                <a class="btn btn-primary btn-sm" href="@Url.Action("Edit", "Location")">Edit Location Info </a>
+            </div>
+        </div>
+    </div>
+    <!-- #region Company And Location Setup  END END END************************************************************************************************* -->
+
+
+
+
+</div>

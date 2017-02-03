@@ -9,7 +9,7 @@ namespace AdminLTEMVC.DBContexts.MainMigrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
             MigrationsDirectory = @"DBContexts\MainMigrations";
         }
 

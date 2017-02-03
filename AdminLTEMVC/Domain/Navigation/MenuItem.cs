@@ -6,15 +6,27 @@ using System.Threading.Tasks;
 
 namespace Domain.Navigation
 {
-    public class MenuItem
+    //http://www.dotnetcurry.com/aspnet-mvc/811/dynamic-menus-aspnet-mvc-entity-framework-code-first-jquery
+    public class Menu
     {
-        public int id { get; set; }
-        public string  Title { get; set; }
-        public string Url { get; set; }
-        public bool  hasSubitems { get; set; }
-        public IEnumerable<MenuItem> SubMenuItems { get; set; }
-        public string Section { get; set; }
-        public bool isparant { get; set; }
-      
+
+        public Menu()
+        {
+            MenuItemList = new List<MenuItems>();
+        }
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public IList<MenuItems> MenuItemList { get; set; }
+
+    }
+
+    public class MenuItems
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string Action { get; set; }
+        public string Controller { get; set; }
+        public string URL { get; set; }
+        public Menu ParantMenu { get; set; }
     }
 }

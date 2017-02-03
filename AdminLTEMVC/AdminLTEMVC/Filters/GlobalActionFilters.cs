@@ -26,7 +26,7 @@ namespace AdminLTEMVC.Filters
             string path = HttpContext.Current.Server.MapPath("/Menues/SiteMap.xml");
             filterContext.Controller.ViewBag.SoftwareName = "Info-IHRM";
             filterContext.Controller.ViewBag.CompanyName = "Infocraft Limited";
-            filterContext.Controller.ViewBag.MenuList = MenuManager.LoadMenu(path);
+            //filterContext.Controller.ViewBag.MenuList = MenuManager.LoadMenu(path);
             
         }
 
